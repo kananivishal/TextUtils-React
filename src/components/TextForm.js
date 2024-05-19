@@ -22,15 +22,18 @@ export default function TextForm(props) {
 
   const onCleartextClick = ()=>{
     setText("")
+    props.showAlert("warning", "Text Cleared!")
   }
 
   const onCopyClick = ()=>{
     navigator.clipboard.writeText(text);
+    props.showAlert("success", "Text Copied To Clipboard!")
   }
 
   const onRemoveSpacesClick = ()=>{
     let removeSpaces = text.trim().split(/ +/).join(' ');
     setText(removeSpaces)
+    props.showAlert("success", "Extra Spaces Removed!")
   }
 
   const [isSpeaking, setIsSpeaking] = useState(false);
