@@ -2,8 +2,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
-import './Bootstrap/css/bootstrap.min.css';
-import './Bootstrap/js/bootstrap.bundle.min';
+// import './Bootstrap/css/bootstrap.min.css';
+// import './Bootstrap/js/bootstrap.bundle.min';
 import { useState } from "react";
 import Alert from "./components/Alert";
 import {
