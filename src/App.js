@@ -2,8 +2,6 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from "./components/About";
-// import './Bootstrap/css/bootstrap.min.css';
-// import './Bootstrap/js/bootstrap.bundle.min';
 import { useState } from "react";
 import Alert from "./components/Alert";
 import {
@@ -45,7 +43,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/" element={
+            <Route exact path="/textutils/" element={
               <TextForm showAlert={showAlert} heading="Enter The Text" mode={mode} />
             }/>
             <Route exact path="/about" element={
