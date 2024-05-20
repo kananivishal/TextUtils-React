@@ -1,10 +1,16 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+import About from "./components/About";
 import './Bootstrap/css/bootstrap.min.css';
 import './Bootstrap/js/bootstrap.bundle.min';
 import { useState } from "react";
 import Alert from "./components/Alert";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -15,7 +21,7 @@ function App() {
       type: type,
       msg: message
     })
-    setTimeout(() =>{
+    setTimeout(() => {
       setAlert(null);
     }, 1500);
   }
@@ -34,11 +40,20 @@ function App() {
   }
   return (
     <>
-      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} aboutText="About" />
-      <Alert alert={alert} />
-      <div className="container my-3">
-        <TextForm showAlert={showAlert} heading="Enter The Text" mode={mode} />
-      </div>
+      <Router>
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} aboutText="About" />
+        <Alert alert={alert} />
+        <div className="container my-3">
+          <Routes>
+            <Route exact path="/" element={
+              <TextForm showAlert={showAlert} heading="Enter The Text" mode={mode} />
+            }/>
+            <Route exact path="/about" element={
+              <About mode={mode}/>
+            }/>
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
