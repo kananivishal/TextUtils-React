@@ -45,10 +45,10 @@ function App() {
           <Routes>
             <Route exact path="/textutils/" element={
               <TextForm showAlert={showAlert} heading="Enter The Text" mode={mode} />
-            }/>
+            } />
             <Route exact path="/about" element={
-              <About mode={mode}/>
-            }/>
+              <About mode={mode} />
+            } />
           </Routes>
         </div>
       </Router>

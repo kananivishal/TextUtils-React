@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Text Utils
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Text Utils is a simple and powerful web application designed to provide various text manipulation functions. With Text Utils, you can easily convert text to uppercase, lowercase, capitalize each word, remove extra spaces, listen to the text, clear text, copy text to the clipboard, and more.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Demo](#demo)
+- [Usage](#usage)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Convert text to uppercase
+- Convert text to lowercase
+- Capitalize each word in the text
+- Remove extra spaces
+- Listen to the text
+- Copy text to the clipboard
+- Clear text
+- Additional features to enhance text manipulation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+You can see the application in action here: [https://kananivishal.github.io/textutils/]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+Once the application is running, you can use the following features:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Convert to Uppercase**: Type or paste your text and click the "Convert to Uppercase" button to transform all text to uppercase.
+2. **Convert to Lowercase**: Type or paste your text and click the "Convert to Lowercase" button to transform all text to lowercase.
+3. **Capitalize Words**: Type or paste your text and click the "Capitalize Words" button to capitalize the first letter of each word.
+4. **Remove Extra Spaces**: Type or paste your text and click the "Remove Extra Spaces" button to eliminate any unnecessary spaces between words.
+5. **Listen Now**: Type or paste your text and click the "Listen Now" button to hear the text read aloud.
+6. **Clear Text**: Click the "Clear Text" button to remove all text from the input area.
+7. **Copy to Clipboard**: Click the "Copy" button to copy the transformed text to your clipboard.
+8. **Your Text Summary**: As you type or paste text into the input area, the application provides a summary that includes:
+   - **Number of Words**: Displays the total number of words in the text.
+   - **Number of Characters**: Displays the total number of characters in the text.
+   - **Reading Time**: Estimates the time it would take to read the text aloud (in minutes).
+9. **Preview**: Provides a real-time preview of the transformed text based on the selected manipulation functions.
