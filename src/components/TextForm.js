@@ -4,11 +4,13 @@ export default function TextForm(props) {
   const onUppercaseClick = () => {
     let uperText = text.toUpperCase();
     setText(uperText)
+    props.showAlert("success", "Convert to Uppercase!")
   }
 
   const onLowercaseClick = () => {
     let lowerText = text.toLowerCase();
     setText(lowerText)
+    props.showAlert("success", "Convert To Lowercase!")
   }
 
   const onCapitalizedwordClick = () => {
@@ -18,6 +20,7 @@ export default function TextForm(props) {
     }
     let capitalizedWord = word.join(' ')
     setText(capitalizedWord)
+    props.showAlert("success", "Convert to Capitalized!")
   }
 
   const onCleartextClick = () => {
@@ -45,6 +48,7 @@ export default function TextForm(props) {
         setIsSpeaking(false);
       };
       window.speechSynthesis.speak(utterance);
+      props.showAlert("success", "Reading the text aloud. Please listen!")
     }
   }
 
@@ -56,16 +60,16 @@ export default function TextForm(props) {
   return (
     <>
       <div className="container" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-        <h3>{props.heading}</h3>
-        <div className="mb-3">
-          <textarea className="form-control" id="TextBox" value={text} onChange={onTextboxChange} style={{ backgroundColor: props.mode === 'dark' ? '#363636' : 'white', color: props.mode === 'dark' ? 'white' : 'black', placeholderColor: props.mode === 'dark' ? 'white' : 'black' }} placeholder="Enter Your Text" rows="8"></textarea>
-          <button className="btn btn-primary my-3 m-1" onClick={onUppercaseClick}>Convert To Uppercase</button>
-          <button className="btn btn-primary my-3 m-1" onClick={onLowercaseClick}>Convert To Lowerercase</button>
-          <button className="btn btn-primary my-3 m-1" onClick={onCapitalizedwordClick}>Capitalized Word</button>
-          <button className="btn btn-primary my-3 m-1" onClick={onRemoveSpacesClick}>Remove Extra Spaces</button>
-          <button className="btn btn-primary my-3 m-1" onClick={onListenClick}>Listen Now</button>
-          <button className="btn btn-success my-3 m-1" onClick={onCopyClick}>Copy To Clipboard</button>
-          <button className="btn btn-danger my-3 m-1" onClick={onCleartextClick}>Clear Text</button>
+        <h3 className="mb-3">{props.heading}</h3>
+        <div className="mb-4">
+          <textarea className="form-control mb-3" id="TextBox" value={text} onChange={onTextboxChange} style={{ backgroundColor: props.mode === 'dark' ? '#363636' : 'white', color: props.mode === 'dark' ? 'white' : 'black', placeholderColor: props.mode === 'dark' ? 'white' : 'black' }} placeholder="Enter Your Text" rows="8"></textarea>
+          <button disabled={text.length===0} className="btn btn-primary my-2 m-1" onClick={onUppercaseClick}>Convert To Uppercase</button>
+          <button disabled={text.length===0} className="btn btn-primary my-2 m-1" onClick={onLowercaseClick}>Convert To Lowerercase</button>
+          <button disabled={text.length===0} className="btn btn-primary my-2 m-1" onClick={onCapitalizedwordClick}>Capitalized Word</button>
+          <button disabled={text.length===0} className="btn btn-primary my-2 m-1" onClick={onRemoveSpacesClick}>Remove Extra Spaces</button>
+          <button disabled={text.length===0} className="btn btn-primary my-2 m-1" onClick={onListenClick}>Listen Now</button>
+          <button disabled={text.length===0} className="btn btn-success my-2 m-1" onClick={onCopyClick}>Copy To Clipboard</button>
+          <button disabled={text.length===0} className="btn btn-danger my-2 m-1" onClick={onCleartextClick}>Clear Text</button>
         </div>
       </div>
       <div className="container" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
