@@ -21,7 +21,7 @@ Text Utils is a simple and powerful web application designed to provide various 
 
 ## Demo
 
-You can see the application in action here: [https://kananivishal.github.io/textutils/]
+You can see the application in action here: https://kananivishal.github.io/TextUtils-React/
 
 ## Usage
 
